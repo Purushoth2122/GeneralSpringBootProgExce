@@ -1,19 +1,18 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
+        stage('Checkout Code') {
             steps {
+                // Check out the code from the development branch
                 git branch: 'development', url: 'https://github.com/Purushoth2122/GeneralSpringBootProgExce.git'
-                sh 'mvn clean install sonar:sonar -Dsonar.password=1234 -Dsonar.login=admin'
             }
         }
-        
-         stage('Test') {
+        stage('Build') {
             steps {
-               echo "Test"
-             
+                // Run Maven clean and package commands
+                sh 'mvn clean package'
             }
         }
     }
 }
+
