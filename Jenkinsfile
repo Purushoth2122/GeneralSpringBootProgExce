@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git branch: 'development', url: 'https://github.com/aamirpatel/GeneralSpringBootProgExce.git'
-                sh 'mvn clean install sonar:sonar -Dsonar.password=admin123 -Dsonar.login=admin'
+                git branch: 'development', url: 'https://github.com/Purushoth2122/GeneralSpringBootProgExce.git'
+                sh 'mvn clean install sonar:sonar -Dsonar.password=1234 -Dsonar.login=admin'
             }
         }
         
