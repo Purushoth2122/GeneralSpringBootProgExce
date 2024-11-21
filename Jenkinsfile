@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clone the specific branch
-                git branch: 'development', url: 'https://github.com/aamirpatel/General-SpringBootProgExce.git'
+                git branch: 'development', url: 'https://github.com/Purushoth2122/General-SpringBootProgExce.git'
             }
         }
 
